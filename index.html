@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- favicon for desctop browsers -->
+    <link rel="icon" href="img/favicon.png" />
+
+    <!-- favicon for iOS devices -->
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+
+    <!-- favicon for Android devices -->
+    <link rel="manifest" href="manifest.webmanifest" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,7 +25,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/queries.css" />
 
-    <title>Omnifood</title>
+    <title>Omnifood &mdash; Never cook again!</title>
   </head>
   <body>
     <header class="header">
@@ -58,10 +67,12 @@
               eat healthy again. Tailored to your personal tastes and
               nutritional needs.
             </p>
-            <a href="#" class="btn btn--primary margin-right-sm"
+            <a href="#section-cta" class="btn btn--primary margin-right-sm"
               >Start eating well</a
             >
-            <a href="#" class="btn btn--outline">Learn more &darr;</a>
+            <a href="#section-how" class="btn btn--outline"
+              >Learn more &darr;</a
+            >
             <div class="delivered-meals">
               <div class="delivered-images">
                 <img src="img/customers/customer-1.jpg" alt="Customer photo" />
@@ -77,11 +88,16 @@
             </div>
           </div>
           <div class="hero-image-box">
-            <img
-              src="img/hero.png"
-              alt="Woman enjoying food, meals in storage container, and food nowls on the table"
-              class="hero-image"
-            />
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+              <source srcset="img/hero-min.png" type="image/png" />
+
+              <img
+                src="img/hero-min.png"
+                alt="Woman enjoying food, meals in storage container, and food nowls on the table"
+                class="hero-image"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -620,7 +636,8 @@
           </ul>
 
           <p class="copyright">
-            Copyright &copy; 2027 by Omnifood Inc. All rights reserved
+            Copyright &copy; <span class="year">2027</span> by Omnifood Inc. All
+            rights reserved
           </p>
         </div>
         <div class="address-col">
@@ -675,5 +692,9 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
+    <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
